@@ -1,1 +1,181 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  position: absolute;
+}
+
+nav.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+nav .logo {
+  width: 5em;
+}
+
+nav ul {
+  padding: 0;
+  margin-bottom: 6em;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 2em;
+}
+
+nav ul li .active {
+  border-bottom: 2px solid;
+}
+
+nav .user a {
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 0 1.5em;
+  font-weight: bold;
+}
+
+nav .user .login {
+  color: #0d50b4;
+}
+
+nav .user .signup {
+  color: #00aeff;
+  padding: 0.3em;
+  border: 1px solid;
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 2em;
+  text-align: center;
+}
+
+.header .header-text {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  height: 60vh;
+  padding: 0 2em;
+}
+
+.header .header-text p {
+  margin-bottom: 2.5em;
+}
+
+.header .header-text .header-btn {
+  text-decoration: none;
+  color: white;
+  background: #0d50b4;
+  padding: 1em 2em;
+  border-radius: 6px;
+}
+
+.header .header-img {
+  height: 40vh;
+}
+
+.header .header-img img {
+  width: 100%;
+  padding-top: 1em;
+}
+
+.section-1 {
+  text-align: center;
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+
+.section-2 {
+  display: -ms-grid;
+  display: grid;
+}
+
+.section-2 > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2em;
+}
+
+.section-2 > div .icons {
+  font-size: 3em;
+}
+
+.section-2 > div i {
+  margin-right: 0.7em;
+  color: #0d50b4;
+}
+
+.section-2 > div h1 {
+  font-size: 1em;
+}
+
+.section-2 > div p {
+  line-height: 1.5em;
+}
+/*# sourceMappingURL=main.css.map */

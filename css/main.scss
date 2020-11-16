@@ -1,0 +1,171 @@
+$colors:(
+    mainColor: #000,
+    secondaryColor: rgb(13, 80, 180),
+    lightBlue: rgb(0, 174, 255)
+);
+
+@function colors($color-name){
+    @return map-get($colors,$color-name)
+};
+
+@import "media";
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+};
+
+.menu-btn{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+    position: absolute;
+
+    // @include medium{
+    //     flex-direction: row;
+    // }
+
+    &.open{
+        transform: translateX(0);
+        transition: all 0.5s linear;
+    }  
+
+    .logo{
+        width: 5em;
+    }
+
+    ul{
+        padding: 0;
+        margin-bottom: 6em;
+
+       li{
+           list-style-type: none;
+           padding: 1em;           
+
+        a{
+            text-decoration: none;
+            color: colors(mainColor);
+            font-size: 2em;
+        }  
+        
+        .active{
+            border-bottom: 2px solid;
+        }
+       }          
+    }
+
+    .user{
+        a{
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 1.5em;
+            font-weight: bold;
+        }
+
+        .login{
+            color: colors(secondaryColor);
+        }
+
+        .signup{
+            color: colors(lightBlue);
+            padding: 0.3em;
+            border: 1px solid;
+        }
+
+    }
+}
+
+.header{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2em;
+    text-align: center;
+
+    .header-text{
+        order: 1;
+        height: 60vh;
+        padding: 0 2em;
+
+        p{
+            margin-bottom: 2.5em;
+        }
+
+
+        .header-btn{
+            text-decoration: none;
+            color: white;
+            background: colors(secondaryColor);
+            padding: 1em 2em;
+            border-radius: 6px;
+        }
+
+    }
+
+    .header-img{
+
+        height: 40vh;
+        img{
+            width: 100%;
+            padding-top: 1em;
+        }
+    }
+}
+
+.section-1{
+    text-align: center;
+    line-height: 2em;
+    margin-bottom: 2em;
+}
+
+.section-2{
+    display: grid;
+
+
+    >div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2em;
+        
+        .icons{
+            font-size: 3em;
+        }
+
+        i{
+            margin-right: 0.7em;
+            color: colors(secondaryColor);
+        }
+
+        h1{
+            font-size: 1em;
+        }
+
+        p{
+            line-height: 1.5em;
+        }
+    }
+}
