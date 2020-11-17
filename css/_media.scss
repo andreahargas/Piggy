@@ -1,5 +1,134 @@
 @mixin medium{
-    @media (min-width: 670px){
-        @content
+    @media (min-width: 772px){
+        @content;
+    }
+}
+
+@mixin large{
+    @media (min-width: 992px){
+        @content;
+    }
+}
+
+@mixin extraLarge{
+    @media (min-width: 1200px){
+        @content;
+    }
+}
+
+.menu-btn{
+    @include medium{
+        
+        display: none;
+    }
+}
+
+nav{
+
+    @include medium{
+        flex-direction: row;
+        transform: translateX(0);
+        transition: none;
+        font-size: 0.5rem;
+        height: 8em;
+        position: static;
+
+        ul{
+            margin: 0;
+            li{
+                display: inline-block;
+
+                a{
+                    margin: 0 1em;
+                }
+            }
+            
+        }
+
+        .logo{
+            margin-left: 1.5em;
+        }
+            } 
+    
+};
+
+.header{
+    @include medium{
+        flex-direction: row;
+        align-items: center;
+        height: 90vh;
+
+        .header-text{
+            order: 0;
+            width: 30vw;
+
+            text-align: left;
+        }
+
+        .header-img{
+            width: 50vw;
+        }
+    }
+}
+
+.section-1{
+    @include medium{
+        width: 60%;
+        margin: auto;
+        h1{
+            font-size: 2em;
+        }
+
+    }
+}
+
+.section-2{
+    @include medium{
+        grid-template-columns: 1fr 1fr;
+
+        .abandoned-cart{
+            border-left: 5px solid lightblue;
+        }
+    }
+}
+
+.section-3{
+    .flex-container{
+        @include medium{
+            flex-direction: row;
+
+            img{
+                width: 50vw;
+            }
+            h1{
+                text-align: left;
+            }
+
+               
+            .diagram-text{
+                text-align: left;
+            }
+    }
+}
+}
+
+.section-4{
+    .blogs{
+        @include medium{
+            flex-direction: row;
+            text-align: left;
+
+            .blog-box{
+                margin: 0.5em;
+            }        
+        }
+    }
+}
+
+footer{
+    .container{
+        @include medium{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
     }
 }
