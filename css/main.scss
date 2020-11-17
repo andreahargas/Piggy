@@ -356,13 +356,16 @@ nav{
 
 footer{
     .container{
-        margin: 2em 1em;
+        margin: 2em 6em;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        text-align: center;        
+        text-align: left;    
+
+
 
         .title{
             font-size: 0.8rem;
+            margin: 0 1.5em;
         }
 
         a{

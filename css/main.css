@@ -395,16 +395,17 @@ nav .user .signup:hover {
 }
 
 footer .container {
-  margin: 2em 1em;
+  margin: 2em 6em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  text-align: center;
+  text-align: left;
 }
 
 footer .container .title {
   font-size: 0.8rem;
+  margin: 0 1.5em;
 }
 
 footer .container a {
