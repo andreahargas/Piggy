@@ -453,6 +453,9 @@ footer .container a:hover {
   nav .logo {
     margin-left: 1.5em;
   }
+  nav .user a {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 772px) {
