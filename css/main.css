@@ -497,16 +497,8 @@ header {
   transition: linear 0.2s;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-.section-5 {
+.trial {
+  max-width: 80rem;
   height: 15em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -521,46 +513,65 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#d1cece), to(white));
   background: linear-gradient(to right, #d1cece, white);
   text-align: center;
-  border-radius: 5px;
-  margin: 1.5em;
+  border-radius: 10px;
+  margin: 0 1rem;
+  margin-bottom: 4em;
 }
 
-.section-5 h1 {
+@media (min-width: 772px) {
+  .trial {
+    margin: auto;
+    margin-bottom: 4em;
+  }
+}
+
+.trial h2 {
   width: 70%;
   margin: 1em auto;
 }
 
-.section-5 .free-trial {
+.trial-links-item {
   display: inline-block;
   text-decoration: none;
-  background: #0d50b4;
-  color: white;
+  margin: 1em;
   padding: 1em 1.5em;
   border-radius: 6px;
-  margin: 1em;
 }
 
-.section-5 .free-trial:hover {
+.trial-links .free-trial {
+  background: #0d50b4;
+  color: white;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
+}
+
+.trial-links .free-trial:hover {
   background-color: #00aeff;
   -webkit-transition: linear 0.2s;
   transition: linear 0.2s;
 }
 
-.section-5 .demo {
-  display: inline-block;
-  text-decoration: none;
+.trial-links .demo {
   background: rgba(173, 216, 230, 0.808);
   color: #0d50b4;
   font-weight: bold;
-  padding: 1em 1.5em;
-  border-radius: 6px;
-  margin: 1em;
+  -webkit-transition: linear 0.2s;
+  transition: linear 0.2s;
 }
 
-.section-5 .demo:hover {
+.trial-links .demo:hover {
   background-color: #00aeff;
   -webkit-transition: linear 0.2s;
   transition: linear 0.2s;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 footer .container {

@@ -1,0 +1,55 @@
+.trial {
+  max-width: 80rem;
+  height: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(209, 206, 206), white);
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 1rem;
+  margin-bottom: 4em;
+
+  @include medium {
+    margin: auto;
+    margin-bottom: 4em;
+  }
+
+  h2 {
+    width: 70%;
+    margin: 1em auto;
+  }
+
+  &-links {
+    &-item {
+      display: inline-block;
+      text-decoration: none;
+      margin: 1em;
+      padding: 1em 1.5em;
+      border-radius: 6px;
+    }
+
+    .free-trial {
+      background: colors(secondaryColor);
+      color: white;
+      transition: linear 0.2s;
+
+      &:hover {
+        background-color: colors(lightBlue);
+        transition: linear 0.2s;
+      }
+    }
+
+    .demo {
+      background: rgba(173, 216, 230, 0.808);
+      color: colors(secondaryColor);
+      font-weight: bold;
+      transition: linear 0.2s;
+
+      &:hover {
+        background-color: colors(lightBlue);
+        transition: linear 0.2s;
+      }
+    }
+  }
+}
