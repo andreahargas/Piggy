@@ -325,20 +325,13 @@ header {
   }
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-.section-3 {
+.help-container {
+  max-width: 80rem;
+  margin: auto;
   margin-bottom: 4em;
 }
 
-.section-3 .flex-container {
+.help-container .help {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,22 +345,44 @@ body {
   margin: 1em;
 }
 
-.section-3 .flex-container img {
+@media (min-width: 772px) {
+  .help-container .help {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 772px) {
+  .help-container .help-img {
+    width: 50%;
+  }
+}
+
+.help-container .help-img img {
   width: 100%;
 }
 
-.section-3 .flex-container h1 {
+.help-container .help h2 {
   text-align: left;
 }
 
-.section-3 .flex-container p {
+.help-container .help p {
   line-height: 1.5em;
   font-size: 0.8rem;
   color: grey;
   text-align: left;
 }
 
-.section-3 .flex-container .diagram-text a {
+@media (min-width: 772px) {
+  .help-container .help-text {
+    width: 50%;
+    padding-left: 1rem;
+  }
+}
+
+.help-container .help-text a {
   color: #00aeff;
   border: 1px solid;
   padding: 0.5em;
@@ -379,33 +394,42 @@ body {
   font-size: 0.8rem;
 }
 
-.section-3 .flex-container .diagram-text a:hover {
+.help-container .help-text a:hover {
   color: #0d50b4;
   -webkit-transition: linear 0.2s;
   transition: linear 0.2s;
 }
 
-.section-4 {
-  margin: 1em;
+.blog-container {
+  max-width: 80rem;
+  margin: 0 1rem;
+  margin-bottom: 4em;
 }
 
-.section-4 .text {
+@media (min-width: 772px) {
+  .blog-container {
+    margin: auto;
+    margin-bottom: 4em;
+  }
+}
+
+.blog-container-text {
   text-align: center;
   width: 70vw;
   margin: auto;
 }
 
-.section-4 .text h1 {
+.blog-container-text h2 {
   font-weight: bold;
 }
 
-.section-4 .text p {
+.blog-container-text p {
   line-height: 2em;
   font-size: 0.8rem;
   margin-bottom: 2em;
 }
 
-.section-4 .blogs {
+.blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,32 +439,48 @@ body {
           flex-direction: column;
 }
 
-.section-4 .blogs .blog-box {
+@media (min-width: 772px) {
+  .blog {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+  }
+}
+
+.blog-item {
   border: 0.2px solid #cac8c8;
   border-radius: 5px;
   margin: 1em 0;
 }
 
-.section-4 .blogs h2 {
+@media (min-width: 772px) {
+  .blog-item {
+    margin: 0.5em;
+  }
+}
+
+.blog-item h3 {
   padding: 0 1em;
   font-size: 1rem;
   text-align: left;
 }
 
-.section-4 .blogs img {
+.blog-item img {
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.section-4 .blogs p {
+.blog-item p {
   line-height: 1.5em;
   font-size: 0.8rem;
   color: gray;
   padding: 0 1em;
 }
 
-.section-4 .blogs a {
+.blog-item a {
   color: #00aeff;
   padding: 0.3em;
   font-weight: bold;
@@ -451,10 +491,19 @@ body {
   padding: 0 1em;
 }
 
-.section-4 .blogs a:hover {
+.blog-item a:hover {
   color: #0d50b4;
   -webkit-transition: linear 0.2s;
   transition: linear 0.2s;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .section-5 {
@@ -540,37 +589,6 @@ footer .container a:hover {
   color: #00aeff;
   -webkit-transition: linear 0.2s;
   transition: linear 0.2s;
-}
-
-@media (min-width: 772px) {
-  .section-3 .flex-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .section-3 .flex-container img {
-    width: 50vw;
-  }
-  .section-3 .flex-container h1 {
-    text-align: left;
-  }
-  .section-3 .flex-container .diagram-text {
-    text-align: left;
-  }
-}
-
-@media (min-width: 772px) {
-  .section-4 .blogs {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    text-align: left;
-  }
-  .section-4 .blogs .blog-box {
-    margin: 0.5em;
-  }
 }
 
 @media (min-width: 772px) {

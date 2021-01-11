@@ -1,33 +1,4 @@
-.section-3 {
-  .flex-container {
-    @include medium {
-      flex-direction: row;
 
-      img {
-        width: 50vw;
-      }
-      h1 {
-        text-align: left;
-      }
-      .diagram-text {
-        text-align: left;
-      }
-    }
-  }
-}
-
-.section-4 {
-  .blogs {
-    @include medium {
-      flex-direction: row;
-      text-align: left;
-
-      .blog-box {
-        margin: 0.5em;
-      }
-    }
-  }
-}
 
 footer {
   .container {
