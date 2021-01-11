@@ -1,20 +1,4 @@
-@mixin medium{
-    @media (min-width: 772px){
-        @content;
-    }
-}
 
-@mixin large{
-    @media (min-width: 992px){
-        @content;
-    }
-}
-
-@mixin extraLarge{
-    @media (min-width: 1200px){
-        @content;
-    }
-}
 
 .menu-btn{
     @include medium{
@@ -78,18 +62,8 @@ nav{
     }
 }
 
-.section-1{
-    @include medium{
-        width: 60%;
-        margin: auto;
-        h1{
-            font-size: 2em;
-        }
 
-    }
-}
-
-.section-2{
+.qualities{
     @include medium{
         grid-template-columns: 1fr 1fr;
 

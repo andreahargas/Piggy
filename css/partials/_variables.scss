@@ -1,0 +1,9 @@
+$colors:(
+    mainColor: #000,
+    secondaryColor: rgb(13, 80, 180),
+    lightBlue: rgb(0, 174, 255)
+);
+
+@function colors($color-name){
+    @return map-get($colors,$color-name)
+};
