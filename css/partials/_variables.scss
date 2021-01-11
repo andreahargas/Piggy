@@ -1,7 +1,8 @@
 $colors:(
     mainColor: #000,
     secondaryColor: rgb(13, 80, 180),
-    lightBlue: rgb(0, 174, 255)
+    lightBlue: rgb(0, 174, 255),
+    lighter: grey,
 );
 
 @function colors($color-name){

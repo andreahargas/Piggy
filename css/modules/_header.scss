@@ -1,0 +1,188 @@
+header {
+  max-width: 80rem;
+  margin: auto;
+  margin-bottom: 5rem;
+
+  @include medium {
+    margin-bottom: 1rem;
+  }
+}
+
+.menu-btn {
+  background: none;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+
+  @include medium {
+    display: none;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  transform: translateX(100%);
+  transition: all 0.5s linear;
+  position: absolute;
+
+  @include medium {
+    flex-direction: row;
+    transform: translateX(0);
+    transition: none;
+    font-size: 0.5rem;
+    height: 8em;
+    position: static;
+  }
+
+  &.open {
+    transform: translateX(0);
+    transition: all 0.5s linear;
+  }
+
+  .logo {
+    width: 6em;
+
+    @include medium {
+      margin-left: 1.5em;
+    }
+  }
+
+  ul {
+    padding: 0;
+
+    @include medium {
+      margin: 0;
+    }
+
+    li {
+      list-style-type: none;
+      padding: 1em;
+
+      @include medium {
+        display: inline-block;
+      }
+
+      a {
+        text-decoration: none;
+        color: colors(mainColor);
+        font-size: 2em;
+
+        &:hover {
+          color: colors(lightBlue);
+          transition: linear 0.2s;
+        }
+
+        @include medium {
+          margin: 0 1em;
+        }
+      }
+
+      .active {
+        border-bottom: 2px solid;
+      }
+    }
+  }
+
+  .user {
+    a {
+      text-decoration: none;
+      font-size: 1.5em;
+      margin: 0 1.5em;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 3em;
+
+      @include medium {
+        margin-bottom: 0;
+      }
+    }
+
+    .login {
+      color: colors(secondaryColor);
+      &:hover {
+        color: colors(lightBlue);
+        transition: linear 0.2s;
+      }
+    }
+
+    .signup {
+      color: colors(lightBlue);
+      border: 1px solid;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      &:hover {
+        color: colors(secondaryColor);
+        transition: linear 0.2s;
+      }
+    }
+  }
+}
+
+.header {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  @include medium {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header-text {
+    order: 1;
+    padding: 0 2em;
+
+    @include medium {
+      order: 0;
+      width: 30vw;
+      text-align: left;
+    }
+
+    h1 {
+      line-height: 1.5em;
+    }
+
+    p {
+      margin-bottom: 2.5em;
+      color: grey;
+      font-size: 0.8rem;
+      line-height: 1.5em;
+    }
+
+    .header-btn {
+      text-decoration: none;
+      color: white;
+      background: colors(secondaryColor);
+      padding: 0.8em 2em;
+      border-radius: 6px;
+      &:hover {
+        background-color: colors(lightBlue);
+        transition: linear 0.2s;
+      }
+    }
+  }
+
+  .header-img {
+    @include medium {
+      width: 50vw;
+    }
+
+    img {
+      width: 100%;
+      padding-top: 1em;
+    }
+  }
+}
