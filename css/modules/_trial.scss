@@ -1,32 +1,38 @@
 .trial {
   max-width: 80rem;
-  height: 15em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: linear-gradient(to right, rgb(209, 206, 206), white);
   text-align: center;
   border-radius: 10px;
+  padding-bottom: 1rem;
   margin: 0 1rem;
   margin-bottom: 4em;
 
   @include medium {
     margin: auto;
     margin-bottom: 4em;
+    padding-bottom: 0;
+    height: 15rem;
   }
 
   h2 {
     width: 70%;
-    margin: 1em auto;
+    margin: 1rem auto;
   }
 
   &-links {
     &-item {
       display: inline-block;
       text-decoration: none;
-      margin: 1em;
-      padding: 1em 1.5em;
+      margin: 0.5rem;
+      padding: 1rem 1.5rem;
       border-radius: 6px;
+
+      @include medium {
+        margin: 1rem;
+      }
     }
 
     .free-trial {

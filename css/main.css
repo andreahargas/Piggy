@@ -1,3 +1,12 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 header {
   max-width: 80rem;
   margin: auto;
@@ -403,7 +412,7 @@ header {
 .blog-container {
   max-width: 80rem;
   margin: 0 1rem;
-  margin-bottom: 4em;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 772px) {
@@ -415,7 +424,6 @@ header {
 
 .blog-container-text {
   text-align: center;
-  width: 70vw;
   margin: auto;
 }
 
@@ -499,7 +507,6 @@ header {
 
 .trial {
   max-width: 80rem;
-  height: 15em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,6 +521,7 @@ header {
   background: linear-gradient(to right, #d1cece, white);
   text-align: center;
   border-radius: 10px;
+  padding-bottom: 1rem;
   margin: 0 1rem;
   margin-bottom: 4em;
 }
@@ -522,20 +530,28 @@ header {
   .trial {
     margin: auto;
     margin-bottom: 4em;
+    padding-bottom: 0;
+    height: 15rem;
   }
 }
 
 .trial h2 {
   width: 70%;
-  margin: 1em auto;
+  margin: 1rem auto;
 }
 
 .trial-links-item {
   display: inline-block;
   text-decoration: none;
-  margin: 1em;
-  padding: 1em 1.5em;
+  margin: 0.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 6px;
+}
+
+@media (min-width: 772px) {
+  .trial-links-item {
+    margin: 1rem;
+  }
 }
 
 .trial-links .free-trial {
@@ -565,17 +581,18 @@ header {
   transition: linear 0.2s;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
+.footer-container {
+  max-width: 80rem;
+  margin: 0 1rem;
 }
 
-footer .container {
-  margin: 2em 6em;
+@media (min-width: 772px) {
+  .footer-container {
+    margin: auto;
+  }
+}
+
+.footer-container .footer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -583,12 +600,20 @@ footer .container {
   text-align: left;
 }
 
-footer .container .title {
+@media (min-width: 772px) {
+  .footer-container .footer {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 2em 6em;
+  }
+}
+
+.footer-container .footer-item-title {
   font-size: 0.8rem;
   margin: 0 1.5em;
 }
 
-footer .container a {
+.footer-container .footer-item a {
   display: block;
   text-decoration: none;
   margin: 1em 1.5em;
@@ -596,16 +621,9 @@ footer .container a {
   font-size: 0.8rem;
 }
 
-footer .container a:hover {
+.footer-container .footer-item a:hover {
   color: #00aeff;
   -webkit-transition: linear 0.2s;
   transition: linear 0.2s;
-}
-
-@media (min-width: 772px) {
-  footer .container {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 }
 /*# sourceMappingURL=main.css.map */
