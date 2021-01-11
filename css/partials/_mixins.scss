@@ -9,15 +9,3 @@
       @content;
   }
 };
-
-@mixin large{
-  @media (min-width: 992px){
-      @content;
-  }
-};
-
-@mixin extraLarge{
-  @media (min-width: 1200px){
-      @content;
-  }
-};
